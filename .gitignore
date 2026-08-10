@@ -1,0 +1,27 @@
+# Python
+
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Environment / secrets
+
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local output
+
+output/
+tmp/
+
+# Local archive is intentionally outside the repository.
+
+archive/
