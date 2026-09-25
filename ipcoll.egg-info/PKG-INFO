@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: ipcoll
+Version: 0.1.0
+Summary: A learning and portfolio project for archiving public Instagram image posts.
+Requires-Python: >=3.14
+License-File: LICENSE
+Requires-Dist: instaloader<5,>=4.15.3
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=9.1.1; extra == "dev"
+Dynamic: license-file

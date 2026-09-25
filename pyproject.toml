@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipcoll"
+version = "0.1.0"
+description = "A learning and portfolio project for archiving public Instagram image posts."
+requires-python = ">=3.14"
+dependencies = [
+    "instaloader>=4.15.3,<5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.1.1,<10",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

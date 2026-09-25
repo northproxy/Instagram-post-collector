@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+ipcoll.egg-info/PKG-INFO
+ipcoll.egg-info/SOURCES.txt
+ipcoll.egg-info/dependency_links.txt
+ipcoll.egg-info/requires.txt
+ipcoll.egg-info/top_level.txt
+src/naming.py
+tests/test_naming.py

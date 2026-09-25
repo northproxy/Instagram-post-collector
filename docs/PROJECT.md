@@ -75,7 +75,7 @@ Development is organized into major stages. Before beginning each major stage, s
 
 The MVP is complete when the following scenario works reliably:
 
-> The user shares a public Instagram image-post URL with the Telegram bot. A scheduled GitHub Actions workflow processes the URL, uploads original images, JPEG derivatives, Markdown, and JSON metadata to the FTP server, updates the protected static web catalog, and sends a success or error report to Telegram. The user can then open the catalog on a phone or computer, filter posts by author or tag, open a post, and download an image locally.
+> The user shares a public Instagram image-post URL with the Telegram bot. A scheduled GitHub Actions workflow processes the URL, uploads original images, JPEG derivatives, and normalized JSON metadata to the FTP server, updates the protected static web catalog, and sends a success or error report to Telegram. The user can then open the catalog on a phone or computer, filter posts by author or tag, open a post, and download an image locally.
 
 ## Success Metrics
 

@@ -2,34 +2,53 @@
 
 ## Stage 0 — Project Foundation
 
+**Status:** Complete
+
 ### Goal
 
-Create a professional project baseline before implementation.
+Create a clean, professional project baseline before implementation.
 
-### Deliverables
+### Work
 
-- repository;
-- documentation pack;
-- license;
-- GitHub Project;
-- labels and milestones;
-- initial issues;
-- branch and commit conventions;
-- security checklist.
+- define project scope and MVP;
+- establish a minimal repository structure;
+- define working conventions;
+- initialize Git and publish the repository;
+- add a concise public README;
+- document the roadmap and key decisions;
+- prepare Stage 1.
 
 ### Definition of Done
 
-All project documents are reviewed, open decisions are visible, and Stage 1 issues are ready.
+- repository structure is clean and intentional;
+- project scope and MVP are documented;
+- GitHub repository is public and readable;
+- working conventions are defined;
+- Stage 1 is clearly described and ready to begin.
 
 ---
 
 ## Stage 1 — Technical Discovery and Proof of Concept
 
+**Status:** In progress
+
 ### Goal
 
 Validate the risky external integrations before building the full system.
 
-### Work
+### Validated So Far
+
+- local Python environment is configured with a project-local `.venv`;
+- project dependencies are managed through `pyproject.toml`;
+- Instaloader `4.15.3` was validated locally against a public Instagram carousel;
+- the test post was processed without login during the proof of concept;
+- a nine-image carousel was downloaded successfully;
+- caption retrieval was validated;
+- raw Instaloader metadata was inspected;
+- deterministic archive naming utilities were implemented as preparatory work for Stage 2;
+- archive naming behavior is covered by 15 passing automated tests.
+
+### Remaining Work
 
 - verify FTP, FTPS, and SFTP support;
 - identify remote web root;
@@ -37,12 +56,10 @@ Validate the risky external integrations before building the full system.
 - verify whether HTTPS can be enabled;
 - test Telegram `getUpdates`;
 - verify authorized user ID;
-- test one public Instagram image post;
-- test one image carousel;
-- test caption retrieval;
-- test GitHub Actions runner compatibility;
+- test GitHub Actions runner compatibility with the selected Instagram extraction approach;
 - upload a synthetic file to FTP;
-- download the uploaded file over HTTP.
+- download the uploaded file over HTTP;
+- validate the Instagram proof of concept in GitHub Actions rather than only locally.
 
 ### Definition of Done
 
@@ -51,6 +68,10 @@ One supported public post can be processed manually in GitHub Actions and upload
 ---
 
 ## Stage 2 — Core Python Pipeline
+
+**Status:** Not formally started
+
+Some deterministic naming utilities have already been implemented and tested during Stage 1 because the archive naming convention was needed to validate the storage design.
 
 ### Goal
 
@@ -61,7 +82,8 @@ Build modular local processing with fake external services.
 - configuration;
 - URL parsing;
 - domain models;
-- metadata generation;
+- normalized metadata generation;
+- archive path and filename generation;
 - image processing;
 - state repository;
 - duplicate detection;
@@ -77,6 +99,8 @@ Synthetic inputs produce deterministic archive packages and catalog indexes.
 ---
 
 ## Stage 3 — Telegram Intake
+
+**Status:** Not started
 
 ### Goal
 
@@ -100,14 +124,18 @@ A test batch retrieves multiple links without losing or duplicating updates.
 
 ## Stage 4 — Instagram Adapter
 
+**Status:** Not started
+
+The local Instaloader proof of concept from Stage 1 is input to this stage, not yet the final adapter implementation.
+
 ### Goal
 
 Process supported public image posts.
 
 ### Work
 
-- adapter proof;
-- post metadata;
+- adapter implementation;
+- normalized post metadata;
 - media download;
 - carousel support;
 - unsupported video detection;
@@ -121,6 +149,8 @@ A defined test set reaches the success target and failures are classified.
 ---
 
 ## Stage 5 — FTP Persistence and Deployment
+
+**Status:** Not started
 
 ### Goal
 
@@ -143,6 +173,8 @@ Repeated and interrupted test runs do not corrupt state or duplicate posts.
 ---
 
 ## Stage 6 — Mobile Frontend
+
+**Status:** Not started
 
 ### Goal
 
@@ -167,6 +199,8 @@ The user can complete the target catalog journey on a phone.
 ---
 
 ## Stage 7 — Automation, Validation, and Release
+
+**Status:** Not started
 
 ### Goal
 

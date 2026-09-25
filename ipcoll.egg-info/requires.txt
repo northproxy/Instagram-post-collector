@@ -1,0 +1,4 @@
+instaloader<5,>=4.15.3
+
+[dev]
+pytest<10,>=9.1.1
